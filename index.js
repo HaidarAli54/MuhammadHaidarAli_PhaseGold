@@ -2,6 +2,8 @@
 
 const express = require('express')
 const app = express ()
+const router = require('../routes/routes')
+
 
 require('dotenv').config()
 
@@ -12,6 +14,9 @@ app.get('/ping',(req,res)=>{
         res.status(200).json({
             massage: 'PONG'
         })
+
+        console.log('Halo cooook')
+
         return
 
     }
@@ -21,6 +26,9 @@ app.get('/ping',(req,res)=>{
         })
     }
 })
+
+app.use('/',router)
+
 app.listen(port, () => {
     console.log(`listening live and well at ${port}`)
   })
