@@ -1,7 +1,7 @@
 
 module.exports = {
 
-    testUserHealt: (req,res)=>{
+    testUserHealth: (req,res)=>{
         try {
             res.status(200).json({
                 massage : 'successfully entering test user handler part'
